@@ -9,29 +9,35 @@ html , body{
     width: 100%;
 }
 
+
+
 #animation{
     width: fit-content;
     overflow: hidden;
 }
 
+#animation1{
+    width: fit-content;
+    overflow: hidden;
+    margin-left: 54vw;
+}
+
+#animation2{
+    width: fit-content;
+    overflow: hidden;
+    
+}
+
 
 #animation .anim{
+    transform: translateX(100%);
+}
+#animation1 .anim1{
+    transform: translateX(-200%);
+}
+#animation2 .anim2{
     transform: translateY(100%);
 }
-
-
-
-
-#minicircle{
-    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    z-index: 99999;
-    border-radius: 50%;
-    background-color: #fff;
-}
-
 #main{
     width: 100%;
     background-color: black;
@@ -78,8 +84,11 @@ html , body{
 #right{
     margin-top: 1vw;
     text-transform: uppercase;
-    margin-left: 54vw;
+    /* margin-left: 54vw; */
     font-size: 0.9vw;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
 }
 
 #left-text{
@@ -136,6 +145,7 @@ html , body{
     align-items: center;
     justify-content: space-between;
     padding-right: 0;
+
 }
 
 #element3{
@@ -158,6 +168,17 @@ html , body{
 
 #element3 h1{
     font-size: 140px;
+}
+#element1 h5{
+    font-size: 01vw;
+}
+
+#element2 h5{
+    font-size: 01vw;
+}
+
+#element3 h5{
+    font-size: 01vw;
 }
 
 #element1 img{
@@ -200,10 +221,11 @@ html , body{
 #third h5{
     opacity: 0.6;
     margin-bottom: 0.8vw;
+    font-size: 0.8vw;
 }
 #third p{
     margin-bottom: 2vw;
-    font-size: 18px;
+    font-size: 1vw;
 }
 
 #third a{
@@ -212,7 +234,8 @@ html , body{
     color: #fff;
     padding: 12px 22px;
     border: 1px solid #fff;
-    font-size: 16px;
+    font-size: 0.8vw;
+    font-weight : bold;
 }
 
 #four{
@@ -253,8 +276,71 @@ html , body{
     gap: 30px;
 }
 
+#footerright a{
+    font-size: 0.8vw;
+    font-weight: 900;
+}
+
 #footer a {
     font-weight: 500;
     color: #fff;
     text-decoration: none;
+    font-size: 0.8vw;
 }
+
+#a {
+    background-image: linear-gradient(
+      to right,
+      #888,
+      #888 50%,
+      #fff 50%
+    );
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 5px 0;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  #a:before{
+    content: '';
+    background: #888;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 1.5px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  #a:hover {
+   background-position: 0;
+  }
+  
+  #a:hover::before{
+    width: 100%;
+  }
+
+  #button {
+    transition: all .5s ease;
+    color: #fff;
+    border: 3px solid white;
+    font-family:'Montserrat', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+    font-size: 17px;
+    background-color : transparent;
+    padding: 10px;
+    outline: none;
+    border-radius: 4px;
+}
+#button:hover {
+    color: #001F3F;
+    background-color: #fff;
+}
+
